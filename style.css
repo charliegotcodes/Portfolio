@@ -1,25 +1,76 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 
+No padding as I do not want spacing between the inner contents and the border of the box 
+*/ 
+body {
+    background-color: rgb(20, 20, 20);
+    margin: 0px;
 }
 
-a, a:hover{
+
+#menu{ 
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+}
+/* 
+Expect to hover over name and have name become 0 opacity while charliegotcodes becomes 1 opacity
+Make sure the charliegotcodes replaces Kevin Charles in positioning.
+*/ 
+
+#KevinCharles{
+    color: rgb(104, 148, 187);
+    font-size: clamp(4rem, 6vw, 6rem);
+    font-family: "Titillium Web", serif;
+    text-align: center;
+    padding-top: 3%;
+}
+#KevinCharles:hover > #hidden{
+    opacity: 1;
+}
+
+
+.menu-item{
+    color: rgb(104, 148, 187);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-family: "Titillium Web", serif;
+
+    display: block;
     text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 0.5vw, 1rem) 0rem;
+    transition: opacity 300ms ease;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
-ul{
-    list-style-type: none;
+#menu-items:hover > .menu-item {
+    opacity: 0.2;
 }
 
+#menu-items:hover >.menu-item:hover {
+    opacity: 1;
+}
+
+
+
+/* 
+Relative positioning of introductory information with 100% width to span the entire screen of the user's device 
+height of 100vh is another representation of 100% of the veiw height for the user's device
+background color set to black with intentions of making a general white theme for the text and bubble buttons to provide contrast
+ */
 .header{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: black;
 }
-.charliegotcodes{
-    text-align: center;
-    color: aliceblue;
 
+.body{
+    margin: 0px;
 }
+
+/* 
+Intend on putting Github user at the center of the page with possibly a image of myself on the bacground near the righthandside 
+but for now the user name will take center frame  
+ */
+
+
+
